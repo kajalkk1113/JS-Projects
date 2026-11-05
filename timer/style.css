@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #312e81, transparent 40%),
+        radial-gradient(circle at bottom right, #581c87, transparent 40%),
+        #0f172a;
+}
+
+h1{
+    color: white;
+}
+
+/* Timer Card */
+#box {
+    width: 420px;
+    max-width: 90%;
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(139, 92, 246, 0.15);
+
+    transition: 0.4s ease;
+}
+
+#box:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(139, 92, 246, 0.25);
+}
+
+/* Timer Display */
+#timer {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 4px;
+
+    color: #a5f3fc;
+
+    text-shadow:
+        0 0 10px rgba(34, 211, 238, 0.7),
+        0 0 25px rgba(34, 211, 238, 0.4);
+
+    margin-bottom: 40px;
+}
+
+/* Buttons Container */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Common Button */
+button {
+    border: none;
+    padding: 13px 22px;
+    border-radius: 12px;
+
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Start Button */
+.start {
+    background: linear-gradient(135deg, #10b981, #059669);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.25);
+}
+
+.start:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.45);
+}
+
+/* Stop Button */
+.stop {
+    background: linear-gradient(135deg, #f43f5e, #e11d48);
+    box-shadow: 0 5px 15px rgba(244, 63, 94, 0.25);
+}
+
+.stop:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(244, 63, 94, 0.45);
+}
+
+/* Reset Button */
+.reset {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.25);
+}
+
+.reset:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.45);
+}
+
+/* Button Click Effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    #box {
+        padding: 35px 20px;
+    }
+
+    #timer {
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
+
+    button {
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+}
